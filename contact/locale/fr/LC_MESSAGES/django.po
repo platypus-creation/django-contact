@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-02 12:19+0100\n"
+"PO-Revision-Date: 2010-09-15 11:55\n"
+"Last-Translator: Guillaume Esquevin <guillaume.esquevin@platypus-creation."
+"com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.5.3\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#: forms.py:6
+msgid "Name"
+msgstr "Nom"
+
+#: forms.py:7
+msgid "Your email"
+msgstr "Votre e-mail"
+
+#: forms.py:8
+msgid "Subject"
+msgstr "Sujet"
+
+#: forms.py:9
+msgid "Message"
+msgstr "Message"
+
+#: views.py:26
+#, python-format
+msgid ""
+"To prevent spamming you cannot send another message so soon, please wait "
+"another %s seconds."
+msgstr ""
+"Pour prévenir les abus, vous ne pouvez pas envoyer un autre message si vite, "
+"veuillez attendre %s secondes."
+
+#: views.py:30
+msgid "Your message has been sent"
+msgstr "Votre message a été envoyé"
+
+#: views.py:33
+msgid ""
+"Sorry, we were unable to send your message due to a technical difficulty. "
+"Please retry later."
+msgstr ""
+"Désolé, nous n'avons pas pu envoyer votre message en raison d'une difficulté "
+"technique. Veuillez réessayer plus tard."
+
+#: templates/contact/contact.html:5
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/contact/contact.html:10
+msgid "Send"
+msgstr "Envoyer"
+
+#~ msgid "Email"
+#~ msgstr "Email"
