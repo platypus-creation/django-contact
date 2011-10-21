@@ -11,6 +11,9 @@ from django.core.urlresolvers import reverse
 
 def contact(request):
     next = request.GET.get('next', '/')
+    anti_spam_delay = 10
+    if hasattr(settings, 'CONTACTS_ANTI_SPAM_DELAY'):
+        anti_spam_delay = settings.CONTACTS_ANTI_SPAM_DELAY
     if request.method == "POST":
         contactForm = ContactForm(request.POST)
         if contactForm.is_valid():
@@ -28,7 +31,7 @@ def contact(request):
                 try:
                     send_mail(contactForm.cleaned_data.get('subject'), contactForm.cleaned_data.get('message'), contactForm.cleaned_data.get('email'), settings.CONTACT_EMAILS)
                     messages.success(request, _('Your message has been sent'))
-                    cache.set(key, 30)
+                    cache.set(key, settings.CONTACT_ANTI_SPAM_DELAY)
                     return HttpResponseRedirect(next)
                 except BadHeaderError:
                     messages.error(request, _('Sorry, we were unable to send your message due to a technical difficulty. Please retry later.'))

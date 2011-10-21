@@ -28,3 +28,5 @@ Add contact to your urls
     ...
     
 Override the contact/contact.html template if necessary
+
+Set `CONTACTS_ANTI_SPAM_DELAY` to the value you want, default is 10 (its the duration within which another attempt will lead to an exception)
