@@ -31,7 +31,7 @@ def contact(request):
                 try:
                     send_mail(contactForm.cleaned_data.get('subject'), contactForm.cleaned_data.get('message'), contactForm.cleaned_data.get('email'), settings.CONTACT_EMAILS)
                     messages.success(request, _('Your message has been sent'))
-                    cache.set(key, settings.CONTACT_ANTI_SPAM_DELAY)
+                    cache.set(key, anti_spam_delay)
                     return HttpResponseRedirect(next)
                 except BadHeaderError:
                     messages.error(request, _('Sorry, we were unable to send your message due to a technical difficulty. Please retry later.'))
